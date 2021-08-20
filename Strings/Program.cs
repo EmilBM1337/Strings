@@ -58,7 +58,13 @@ namespace Strings
 
             //Opgave 1.6
 
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
 
+            for (b = 0; b <= c; b++)
+            {
+                Console.WriteLine(b);
+            }
         }
     }
 }
