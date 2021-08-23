@@ -58,12 +58,48 @@ namespace Strings
 
             //Opgave 1.6
 
-            int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
-
-            for (b = 0; b <= c; b++)
+            while (true)
             {
-                Console.WriteLine(b);
+                Console.WriteLine("Jeg kan tælle fra det første tal du skriver, til det andet tal du skriver.");
+                Console.WriteLine("Skriv det første tal.");
+                int b = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Skriv det andet tal.");
+                int c = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
+
+                if (b > c)
+                {
+                    Console.WriteLine("ERROR");
+                }
+
+                for (int v = b; v <= c; v++)
+                {
+                    Console.WriteLine(v);
+                }
+
+                Console.WriteLine("");
+                Console.WriteLine("Vil du prøve igen?");
+                Console.WriteLine("> j < for ja.");
+                Console.WriteLine("> n < for nej.");
+
+                string svar = Console.ReadLine();
+
+                if (svar.Equals("j"))
+                {
+                    Console.WriteLine("Ja");
+                    Console.WriteLine("");
+                    continue;
+                }
+                else if (svar.Equals("n"))
+                {
+                    Console.WriteLine("Nej");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("ERROR");
+                }
             }
         }
     }
