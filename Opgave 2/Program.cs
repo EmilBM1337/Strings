@@ -31,9 +31,14 @@ namespace Opgave_2
 
             //Opgave 2.3
 
-            while (true)
-            {
+            int c, d;
 
+            Console.WriteLine("Intast den tabel du vil se, fra 1 til 20.");
+            d = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+            for (c = 1; c <= 20; c++)
+            {
+                Console.WriteLine("{0} X {1} = {2}", d, c, d * c);
             }
         }
     }
